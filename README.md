@@ -55,7 +55,7 @@ fastapi_rag/
 Clone the repository and navigate into the project directory:
 ```bash
 git clone https://github.com/samififteen/local-rag-microservice.git
-cd local-rag-microservice
+cd app
 ```
 
 Create a virtual environment and activate it:
