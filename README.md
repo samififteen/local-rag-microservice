@@ -53,13 +53,13 @@ fastapi_rag/
 
 ### 2. Installation
 Clone the repository and navigate into the project directory:
-\`\`\`bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-cd YOUR_REPOSITORY_NAME
-\`\`\`
+```bash
+git clone https://github.com/samififteen/local-rag-microservice.git
+cd local-rag-microservice
+```
 
 Create a virtual environment and activate it:
-\`\`\`bash
+```bash
 # Windows
 python -m venv venv
 venv\Scripts\activate
@@ -67,25 +67,25 @@ venv\Scripts\activate
 # macOS/Linux
 python3 -m venv venv
 source venv/bin/activate
-\`\`\`
+```
 
 Install the required dependencies:
-\`\`\`bash
+```bash
 pip install -r requirements.txt
-\`\`\`
+```
 *(Note: This project strictly pins `numpy<2.0.0` and `httpx<0.28.0` to ensure ChromaDB and OpenAI client compatibility).*
 
 ### 3. Environment Variables
 Create a `.env` file in the root directory and add your OpenAI API key:
-\`\`\`env
+```env
 OPENAI_API_KEY=sk-your_actual_api_key_here
-\`\`\`
+```
 
 ### 4. Run the Server
 Launch the FastAPI application using Uvicorn:
-\`\`\`bash
+```bash
 uvicorn app.main:app --reload
-\`\`\`
+```
 
 ---
 
@@ -96,25 +96,25 @@ Once the server is running, navigate to **http://127.0.0.1:8000/docs** in your b
 ### 1. Ingest Data (`POST /ingest`)
 Feed your AI private knowledge.
 **Payload:**
-\`\`\`json
+```json
 {
   "text": "Project Aetheris is a confidential energy initiative launched in 2025. It uses deep-sea geothermal vents to generate clean electrical grid power. The lead scientist is Dr. Helena Vance.",
   "source_name": "aetheris_briefing.txt"
 }
-\`\`\`
+```
 
 ### 2. Query Data (`POST /query`)
 Ask questions based on your ingested knowledge.
 **Payload:**
-\`\`\`json
+```json
 {
   "question": "Who is the lead scientist of Project Aetheris?",
   "top_k": 3
 }
-\`\`\`
+```
 
 **Response:**
-\`\`\`json
+```json
 {
   "question": "Who is the lead scientist of Project Aetheris?",
   "answer": "The lead scientist of Project Aetheris is Dr. Helena Vance.",
@@ -122,7 +122,7 @@ Ask questions based on your ingested knowledge.
     "Project Aetheris is a confidential energy initiative launched in 2025... The lead scientist is Dr. Helena Vance."
   ]
 }
-\`\`\`
+```
 
 ---
 
