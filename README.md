@@ -27,7 +27,7 @@ Built with **FastAPI**, **ChromaDB**, and **OpenAI**.
 
 ## 📂 Project Structure
 
-\`\`\`text
+```text
 fastapi_rag/
 ├── app/
 │   ├── __init__.py
@@ -41,7 +41,7 @@ fastapi_rag/
 ├── .env                   # Environment variables (API Keys)
 ├── requirements.txt       # Project dependencies
 └── README.md              # Project documentation
-\`\`\`
+```
 
 ---
 
@@ -127,4 +127,4 @@ Ask questions based on your ingested knowledge.
 ---
 
 ## 🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/samififteen/local-rag-microservice/issues).
